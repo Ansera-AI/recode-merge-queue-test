@@ -32,3 +32,8 @@ export function square(n) {
 export function negate(n) {
   return -n;
 }
+
+/** @returns {number} n plus one. */
+export function increment(n) {
+  return n + 1;
+}
