@@ -8,6 +8,11 @@ export function add(a, b) {
   return a + b;
 }
 
+/** @returns {number} Twice n. */
+export function double(n) {
+  return n * 2;
+}
+
 /** @returns {number} a minus b. */
 export function subtract(a, b) {
   return a - b;
