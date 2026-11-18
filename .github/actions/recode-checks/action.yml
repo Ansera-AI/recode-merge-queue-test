@@ -1,0 +1,25 @@
+name: recode checks
+description: The checks near the change first, then the whole suite. A failed check runs once more, and a flaky test is marked, not fixed.
+author: recode
+inputs:
+  checks:
+    description: The named checks to run, from f4r/checks.yaml or what the repo has.
+    default: types, tests, lint
+  near:
+    description: Run the checks near the change first.
+    default: 'true'
+  rerun:
+    description: Run a failed check once more at the same commit.
+    default: 'true'
+  flaky-fails:
+    description: A flaky test fails the job. Once connected to recode, the project's setting wins.
+    default: 'false'
+  server:
+    description: recode's server, which the step reports to with GitHub's identity token for the run (permissions id-token write).
+    default: https://code.f4r.ai
+runs:
+  using: node24
+  main: index.cjs
+branding:
+  icon: check-circle
+  color: gray-dark

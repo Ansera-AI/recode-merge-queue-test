@@ -1,0 +1,22 @@
+name: recode checks
+on:
+  pull_request:
+  merge_group:
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  checks:
+    name: recode / checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The step from this repo while it isn't published; it reports to a dev server.
+      - uses: ./.github/actions/recode-checks
+        with:
+          server: https://f4r-dev.ngrok-free.dev

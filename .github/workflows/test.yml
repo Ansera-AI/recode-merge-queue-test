@@ -13,3 +13,6 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      # For recode's "main stays green" test: main breaks only once this marker is on it.
+      - if: github.event_name == 'push' && github.ref == 'refs/heads/main' && hashFiles('packages/marker/BREAK_MAIN') != ''
+        run: echo "main is broken on purpose by packages/marker/BREAK_MAIN" && exit 1
