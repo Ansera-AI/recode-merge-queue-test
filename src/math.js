@@ -23,6 +23,11 @@ export function multiply(a, b) {
   return b * a;
 }
 
+/** @returns {number} Three times n. */
+export function triple(n) {
+  return n * 3;
+}
+
 /** @returns {number} n squared. */
 export function square(n) {
   return n * n;
