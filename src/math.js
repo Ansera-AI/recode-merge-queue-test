@@ -52,3 +52,8 @@ export function increment(n) {
 export function decrement(n) {
   return n - 1;
 }
+
+/** @returns {number} The real cube root of n. */
+export function cubeRoot(n) {
+  return Math.cbrt(n);
+}
