@@ -25,7 +25,7 @@ export function multiply(a, b) {
 
 /** @returns {number} n squared. */
 export function square(n) {
-  return n * n;
+  return n ** 2;
 }
 
 /** @returns {number} The negation of n. */
