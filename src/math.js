@@ -47,3 +47,8 @@ export function negate(n) {
 export function increment(n) {
   return n + 1;
 }
+
+/** @returns {number} n minus one. */
+export function decrement(n) {
+  return n - 1;
+}
