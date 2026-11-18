@@ -8,6 +8,11 @@ export function subtract(a, b) {
   return a - b;
 }
 
+/** @returns {number} Half of n. */
+export function halve(n) {
+  return n / 2;
+}
+
 /** @returns {number} The product of a and b. */
 export function multiply(a, b) {
   return a * b;
