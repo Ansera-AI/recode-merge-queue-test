@@ -10,7 +10,7 @@ export function subtract(a, b) {
 
 /** @returns {number} The product of a and b. */
 export function multiply(a, b) {
-  return a * b;
+  return b * a;
 }
 
 /** @returns {number} n squared. */
