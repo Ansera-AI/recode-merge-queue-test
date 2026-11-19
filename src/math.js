@@ -62,3 +62,11 @@ export function cubeRoot(n) {
 export function clamp(n, min, max) {
   return Math.min(Math.max(n, min), max);
 }
+
+/**
+ * @returns {number} n limited to a valid page size, 1..100.
+ * The 100 matches limits.maxPageSize in fr4-sandbox-2; keep the two in sync by hand.
+ */
+export function clampPageSize(n) {
+  return clamp(n, 1, 100);
+}
