@@ -57,3 +57,8 @@ export function decrement(n) {
 export function cubeRoot(n) {
   return Math.cbrt(n);
 }
+
+/** @returns {number} n limited to the range [min, max]; expects min <= max. */
+export function clamp(n, min, max) {
+  return Math.min(Math.max(n, min), max);
+}
